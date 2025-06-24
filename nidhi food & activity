@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nidhi Food & Activity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-white: #ffffff;
+      --pastel-blush: #fce4ec;
+      --pastel-lavender: #ede7f6;
+      --pastel-mint: #e0f7fa;
+      --cream-pink: #ffeef2;
+      --font-title: 'Pacifico', cursive;
+      --font-subtitle: 'Fraunces', serif;
+      --font-body: 'Quicksand', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg-white);
+      font-family: var(--font-body);
+      color: #2e2e2e;
+      overflow-x: hidden;
+      padding-bottom: 5rem;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--pastel-blush), var(--pastel-mint));
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      position: relative;
+    }
+
+    header h1 {
+      font-family: var(--font-title);
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      color: #d81b60;
+      animation: rise 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes rise {
+      0% {transform: translateY(20px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
+    }
+
+    .highlight-bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, #fce4ec, #e0f7fa);
+    }
+
+    section {
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 2.5rem;
+      border-radius: 30px;
+      background: linear-gradient(145deg, var(--bg-white), var(--pastel-lavender));
+      box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transform: rotateZ(-0.5deg);
+      position: relative;
+    }
+
+    h2 {
+      font-family: var(--font-subtitle);
+      font-size: 2.2rem;
+      color: #4a148c;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: white;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: #6a1b9a;
+      position: relative;
+      cursor: pointer;
+      border: none;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255,255,255,0.7);
+      transform: skewX(-25deg);
+      transition: left 0.5s ease;
+    }
+
+    .button:hover::before {
+      left: 125%;
+    }
+
+    .button:hover {
+      background: var(--cream-pink);
+      color: #c2185b;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+
+    /* Floating Emoji Styling */
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: floatUp 10s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-40vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nidhi Food & Activity</h1>
+    <div class="highlight-bar"></div>
+  </header>
+
+  <section class="card">
+    <h2>Welcome</h2>
+    <p>Enjoy a soft blend of food and fitness with charming vibes and sweet simplicity. Carefully crafted to bring wellness, flavour and joy into everyday moments.</p>
+    <button class="button">Get Started</button>
+  </section>
+
+  <section class="card">
+    <h2>What We Offer</h2>
+    <p>Thoughtful meal ideas, lifestyle boosts, and mellow daily rituals wrapped in a warm, pastel palette of inspiration.</p>
+    <button class="button">Explore More</button>
+  </section>
+
+  <!-- Floating Emojis -->
+  <div class="emoji" style="left: 5%; animation-delay: 0s;">🍓</div>
+  <div class="emoji" style="left: 20%; animation-delay: 2s;">🥑</div>
+  <div class="emoji" style="left: 35%; animation-delay: 4s;">🍩</div>
+  <div class="emoji" style="left: 50%; animation-delay: 6s;">🍇</div>
+  <div class="emoji" style="left: 65%; animation-delay: 8s;">🧁</div>
+  <div class="emoji" style="left: 80%; animation-delay: 3s;">🍒</div>
+  <div class="emoji" style="left: 90%; animation-delay: 5s;">🍍</div>
+</body>
+</html>
